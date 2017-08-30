@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 type Customer struct {
     Name    string
     Rentals []Rental
@@ -27,12 +25,6 @@ func (customer *Customer) FrequentRenterPointsEarned() int {
     return points
 }
 
-func (customer *Customer) ProduceStatement() Statement {
-    var content = fmt.Sprintf("Rental Record for %s\n", customer.Name)
-    for _, rental := range customer.Rentals {
-        content += fmt.Sprintf("\t%s\t%.2f\n", rental.Movie.Title(), rental.Amount())
-    }
-    content += fmt.Sprintf("Amount owed is %.2f\n", customer.AmountOwed())
-    content += fmt.Sprintf("You earned %d frequent renter points", customer.FrequentRenterPointsEarned())
-    return Statement{Output: content}
+func (customer *Customer) ProduceStatement(producer StatementProducer) string {    
+    return producer.ProduceStatementFor(customer)
 }
