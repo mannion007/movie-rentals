@@ -10,9 +10,7 @@ func TestPlainTextStatementForSingleRegularMovieForMultipleDays(t *testing.T) {
     var actual string = c.ProduceStatement().Output
     
     if actual != expected {
-        t.Error("Incorrect statement")
-        t.Log(expected)
-        t.Log(actual)
+        t.Fatalf("Expected %s, got %s", expected, actual)
     }
 }
 
@@ -24,9 +22,7 @@ func TestPlainTextStatementForMultipleRegularMoviesForOneDay(t *testing.T) {
     var actual string = c.ProduceStatement().Output
     
     if actual != expected {
-        t.Error("Incorrect statement")
-        t.Log(expected)
-        t.Log(actual)
+        t.Fatalf("Expected %s, got %s", expected, actual)
     }
 }
 
@@ -39,9 +35,7 @@ func TestPlainTextStatementForMultipleRegularMoviesForMultipleDays(t *testing.T)
     var actual string = c.ProduceStatement().Output
     
     if actual != expected {
-        t.Error("Incorrect statement")
-        t.Log(expected)
-        t.Log(actual)
+        t.Fatalf("Expected %s, got %s", expected, actual)
     }
 }
 
@@ -53,9 +47,7 @@ func TestPlainTextStatementForSingleNewReleaseMovieForOneDay(t *testing.T) {
     var actual string = c.ProduceStatement().Output
     
     if actual != expected {
-        t.Error("Incorrect statement")
-        t.Log(expected)
-        t.Log(actual)
+        t.Fatalf("Expected %s, got %s", expected, actual)
     }
 }
 
@@ -67,9 +59,7 @@ func TestPlainTextStatementForSingleNewReleaseMovieForMultipleDays(t *testing.T)
     var actual string = c.ProduceStatement().Output
     
     if actual != expected {
-        t.Error("Incorrect statement")
-        t.Log(expected)
-        t.Log(actual)
+        t.Fatalf("Expected %s, got %s", expected, actual)
     }
 }
 
@@ -82,9 +72,7 @@ func TestPlainTextStatementForMultipleNewReleaseMovieForOneDay(t *testing.T) {
     var actual string = c.ProduceStatement().Output
     
     if actual != expected {
-        t.Error("Incorrect statement")
-        t.Log(expected)
-        t.Log(actual)
+        t.Fatalf("Expected %s, got %s", expected, actual)
     }
 }
 
@@ -97,9 +85,7 @@ func TestPlainTextStatementForMultipleNewReleaseMovieForMultipleDays(t *testing.
     var actual string = c.ProduceStatement().Output
     
     if actual != expected {
-        t.Error("Incorrect statement")
-        t.Log(expected)
-        t.Log(actual)
+        t.Fatalf("Expected %s, got %s", expected, actual)
     }
 }
 
@@ -111,9 +97,7 @@ func TestPlainTextStatementForSingleChildrenRentalForOneDay(t *testing.T) {
     var actual string = c.ProduceStatement().Output
     
     if actual != expected {
-        t.Error("Incorrect statement")
-        t.Log(expected)
-        t.Log(actual)
+        t.Fatalf("Expected %s, got %s", expected, actual)
     }
 }
 
@@ -125,9 +109,7 @@ func testPlainTextStatementForSingleChildrenRentalForMultipleDays(t *testing.T) 
     var actual string = c.ProduceStatement().Output
     
     if actual != expected {
-        t.Error("Incorrect statement")
-        t.Log(expected)
-        t.Log(actual)
+        t.Fatalf("Expected %s, got %s", expected, actual)
     }
 }
 
@@ -140,9 +122,7 @@ func TestPlainTextStatementForMultipleChildrenRentalForOneDay(t *testing.T) {
     var actual string = c.ProduceStatement().Output
     
     if actual != expected {
-        t.Error("Incorrect statement")
-        t.Log(expected)
-        t.Log(actual)
+        t.Fatalf("Expected %s, got %s", expected, actual)
     }
 }
 
@@ -155,9 +135,7 @@ func TestPlainTextStatementForMultipleChildrenRentalForMultipleDays(t *testing.T
     var actual string = c.ProduceStatement().Output
     
     if actual != expected {
-        t.Error("Incorrect statement")
-        t.Log(expected)
-        t.Log(actual)
+        t.Fatalf("Expected %s, got %s", expected, actual)
     }
 }
 
@@ -171,9 +149,7 @@ func TestPlainTextStatementForACombinationOfRentalsForOneDay(t *testing.T) {
     var actual string = c.ProduceStatement().Output
     
     if actual != expected {
-        t.Error("Incorrect statement")
-        t.Log(expected)
-        t.Log(actual)
+        t.Fatalf("Expected %s, got %s", expected, actual)
     }
 }
 
@@ -187,8 +163,6 @@ func TestPlainTextStatementForACombinationOfRentalsForMultipleDays(t *testing.T)
     var actual string = c.ProduceStatement().Output
     
     if actual != expected {
-        t.Error("Incorrect statement")
-        t.Log(expected)
-        t.Log(actual)
+        t.Fatalf("Expected %s, got %s", expected, actual)
     }
 }
