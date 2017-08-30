@@ -9,7 +9,7 @@ func (customer *Customer) AddRental(rental Rental) {
     customer.Rentals = append(customer.Rentals, rental)
 }
 
-func (customer *Customer) AmountOwed() float64 {
+func (customer Customer) AmountOwed() float64 {
     var amount float64
     for _, rental := range customer.Rentals {
         amount += rental.Amount()
@@ -17,7 +17,7 @@ func (customer *Customer) AmountOwed() float64 {
     return amount
 }
 
-func (customer *Customer) FrequentRenterPointsEarned() int {
+func (customer Customer) FrequentRenterPointsEarned() int {
     var points int
     for _, rental := range customer.Rentals {
         points += rental.FrequentRenterPointsEarned()
@@ -25,6 +25,6 @@ func (customer *Customer) FrequentRenterPointsEarned() int {
     return points
 }
 
-func (customer *Customer) ProduceStatement(producer StatementProducer) string {    
+func (customer Customer) ProduceStatement(producer StatementProducer) string {    
     return producer.ProduceStatementFor(customer)
 }

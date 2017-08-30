@@ -4,7 +4,7 @@ import "fmt"
 
 type HtmlStatementProducer struct {}
 
-func (htmlStatementProducer HtmlStatementProducer) ProduceStatementFor(customer *Customer) string {
+func (htmlStatementProducer HtmlStatementProducer) ProduceStatementFor(customer Customer) string {
     var content = fmt.Sprintf("<h1>Rental Record for %s</h1>", customer.Name)
     content += "<ul>"
     for _, rental := range customer.Rentals {
